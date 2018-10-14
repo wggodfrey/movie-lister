@@ -4,13 +4,15 @@ import { setInput } from './../actions/input.js';
 
 const mapStateToProps = (state) => {
   return {
-  	input: state.input
+    input: state.input,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return { 
-    handleInputChange: (text) => (dispatch(setInput(text)))
+    handleInputChange: (text) => {
+    	dispatch(setInput(text));
+    }
   };
 };
 

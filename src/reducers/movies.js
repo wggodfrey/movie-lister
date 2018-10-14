@@ -12,6 +12,7 @@ const movieReducer = (state = [], action) => {
       return state.concat({ title: action.payload });
 
     case 'REMOVE_MOVIE':
+      console.log(action.payload);
       return state.filter(function(m) { return m.title !== action.payload });
 
     default:

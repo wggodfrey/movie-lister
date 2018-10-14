@@ -1,7 +1,7 @@
 import React from 'react';
 import MovieSearchField from '../containers/MovieSearchField.js';
 import MovieEntryField from '../containers/MovieEntryField.js';
-import MovieListItem from '../components/MovieListItem';
+import MovieListItem from '../containers/MovieListItem';
 
 const MovieList = (props) => {
   return (
@@ -10,7 +10,6 @@ const MovieList = (props) => {
       <MovieSearchField />
       <MovieEntryField />
       { props.movies.map((movie, index) => {
-          console.log(movie, index)
           let title = movie.title.toLowerCase();
           let input = props.input.toLowerCase();
           if (title.indexOf(input) !== -1) {

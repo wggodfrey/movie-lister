@@ -3,7 +3,7 @@ import React from 'react';
 const MovieListItem = (props) => (
 	<div className="list-item">
 		<span>{props.movie.title}</span>
-		<i className="material-icons close">close</i>
+		<i className="material-icons close" onClick={()=> props.handleRemoveMovieButtonClick(props.movie)}>close</i>
 	</div>
 ); 
 
