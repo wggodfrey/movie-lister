@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import MovieListItem from './../components/MovieListItem.js';
-import { removeMovie } from './../actions/movies.js';
+import { removeMovie, toggleWatched } from './../actions/movies.js';
 
 const mapStateToProps = (state) => {
   return {
@@ -11,8 +11,10 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return { 
     handleRemoveMovieButtonClick: (movie) => {
-      console.log(movie);
       dispatch(removeMovie(movie.title));
+    },
+    handleToggleWatchedStatusClick: (movie) => {
+      dispatch(toggleWatched(movie.title));
     }
   };
 };

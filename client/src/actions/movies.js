@@ -15,4 +15,9 @@ const removeMovie = (payload) => ({
   payload: payload
 });
 
-export { setMovies, addMovie, removeMovie };
+const toggleWatched = (payload) => ({
+  type: 'TOG_WATCHED', 
+  payload: payload
+});
+
+export { setMovies, addMovie, removeMovie, toggleWatched };

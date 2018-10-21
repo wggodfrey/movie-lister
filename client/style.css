@@ -1,0 +1,166 @@
+html {
+	margin: 0px;
+	min-width: 500px;
+}
+
+body {
+	background: #f1f1f1;
+	font-family: Verdana;
+	margin: 0px;
+}
+
+input {
+	width: calc(100% - 10px);
+	padding: 5px;
+	border: none;
+	color: #ffffff;
+	background-color: #c2c2c2;
+}
+
+#banner {
+	width: 100%;
+	padding: 10px calc(5% + 10px);
+	font-size: 16px;
+	font-weight: 400;
+	color: #fff;
+	background-color: #1f1531; /*midnight*/
+}
+
+i.material-icons {
+	width: 16px;
+	height: 16px;
+	display:inline-block;
+	text-align: center;
+	background-color: #c2c2c2;
+	color: #525252;
+	font-style: normal;
+	cursor: pointer;
+}
+
+i.material-icons:hover {
+	color: #ffffff !important;
+}
+
+i.material-icons.close {
+	font-size: 16px;
+	border-radius: 2px;
+	padding: 3px 3px;
+	margin: 0px 0px 0px 6px;
+}
+
+i.material-icons.close:hover {
+	background-color: #b7410e; /*rust*/
+}
+
+i.material-icons.create {
+	position: relative;
+	top: 4px;
+	font-size: 17px;
+	border-radius: 11px;
+	padding: 3px 4px 4px 3px;
+	margin: 0px 0px 0px 5px;
+}
+
+i.material-icons.create:hover {
+	background-color: #2c493f; /*evergreen*/
+}
+
+i.material-icons.filter {
+	font-size: 16px;
+	border-radius: 2px;
+	padding: 3px 3px;
+	margin: 0px 0px 0px 6px;
+}
+
+i.material-icons.todo {
+	color: #b7410e; /*rust*/
+	font-size: 16px;
+	border-radius: 2px;
+	padding: 3px 3px;
+	margin: 0px 0px 0px 6px;
+}
+
+i.material-icons.todo:hover {
+	background-color: #b7410e; /*rust*/
+}
+
+i.material-icons.done {
+	color: #2c493f; /*evergreen*/
+	font-size: 16px;
+	border-radius: 2px;
+	padding: 3px 3px;
+	margin: 0px 0px 0px 6px;
+}
+
+i.material-icons.done:hover {
+	background-color: #2c493f /*evergreen*/
+}
+
+.list-heading {
+	height: 0px;
+	width: 100%;
+}
+
+.search-field {
+	float:left;
+	display: inline-block;
+	width: calc(100% - 56px);
+	margin: 5px 0px;
+}
+
+.filter-button {
+	float:left;
+	display: inline-block;
+	margin: 5px 0px;
+}
+
+.entry-field {
+	width: calc(100% - 38px);
+}
+
+.inner-wrapper {
+	min-width: 500px;
+	width: 90%;
+	margin: 0px 5%;
+}
+
+.api-searchbar {
+	display:block;
+	background: #ffffff;
+	padding: 8px 10px 10px 10px;
+	margin: 15px 10px;
+}
+
+.list-controller {
+	height: 35px;
+	display: block;
+	background: #ffffff;
+	padding: 0px 5px;
+}
+
+.movie-list {
+	background: #ffffff;
+	margin: 15px 10px;
+	padding: 5px;
+}
+
+.list-item {
+	display: block;
+	margin: 5px;
+	font-weight: 200;
+	font-size: 13px;
+}
+
+.list-item span {
+	float:left;
+	width: calc(100% - 66px);
+	display: inline-block;
+	padding: 3px 5px;
+	background: #efefef;
+}
+
+.list-item span:hover {
+	cursor: pointer;
+	background: #a9a9a9;
+}
+

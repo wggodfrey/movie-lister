@@ -1,19 +1,20 @@
 import { connect } from 'react-redux';
-import MovieSearchField from './../components/MovieSearchField.js';
+import MovieListController from './../components/MovieListController.js';
 import { setInput } from './../actions/input.js';
 
 const mapStateToProps = (state) => {
   return {
     input: state.input,
+    filters: state.filters,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return { 
     handleInputChange: (text) => {
-    	dispatch(setInput(text));
+      dispatch(setInput(text));
     }
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(MovieSearchField);
+export default connect(mapStateToProps, mapDispatchToProps)(MovieListController);
