@@ -12,22 +12,30 @@ export default class App extends React.Component {
 
   componentWillMount() {
     //default state
-    let movies = [
-      {title: 'Mean Girls', watched: true},
-      {title: 'Hackers', watched: false},
-      {title: 'The Grey', watched: true},
-      {title: 'Sunshine', watched: false},
-      {title: 'Ex Machina', watched: true},
-    ];
-    let input = '';
-    let filters = {
-      watched: false,
-      unwatched: false,
-    }
-    //initialize state
-    store.dispatch(setMovies(movies));
-    store.dispatch(setFilters(filters));
-    store.dispatch(setInput(input));
+    $.ajax({
+      type: 'GET',
+      url: 'http://127.0.0.1:3000/movies',
+      success: (movies) => {
+        store.dispatch(setMovies(movies));
+        store.dispatch(setFilters({ watched: false, unwatched: false }));
+        store.dispatch(setInput(''));
+      }
+    });
+    
+  }
+
+  componentDidMount() {
+    document.addEventListener('click',(e) => {
+      if (!event.target.matches('.more-embedded')) {
+        let dropdowns = document.getElementsByClassName('item-options');
+        for (let i = 0; i < dropdowns.length; i++) {
+          if (dropdowns[i].classList.contains('show')) {
+            dropdowns[i].classList.remove('show');
+          }
+        }
+        $('.more-embedded').css({ pointerEvents: 'all' });
+      }
+    });
   }
 
   render() {

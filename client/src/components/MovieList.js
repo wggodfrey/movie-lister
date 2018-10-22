@@ -3,11 +3,9 @@ import MovieListController from '../containers/MovieListController.js';
 import MovieListItem from '../containers/MovieListItem';
 
 const MovieList = (props) => {
-  console.log(props);
   return (
     <div className="movie-list">
       <MovieListController />
-
       { 
         props.movies.map((movie, index) => {
           let title = movie.title.toLowerCase();

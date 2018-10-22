@@ -19,7 +19,7 @@ const movieReducer = (state = [], action) => {
 
     case 'TOG_WATCHED':
       let _movie = _state.filter(function(m) { return m.title === action.payload })[0];
-      _movie.watched = !_movie.watched;
+      _movie.watched = +!_movie.watched;
       return _state;
 
     default:

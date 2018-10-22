@@ -12,7 +12,19 @@ const mapDispatchToProps = (dispatch) => {
   return { 
     handleAddMovieButtonClick: (movie, movies) => {
       if (movie !== '' && movies.map((m) => { return m.title }).indexOf(movie) === -1) {
-        dispatch(addMovie(movie));
+        $.ajax({
+          type: 'POST',
+          url: 'http://127.0.0.1:3000/movie',
+          data: { title: movie, watched: 0 },
+          dataType: 'json',
+          success: () => {
+            dispatch(addMovie(movie));
+          },
+          error: (err) => {
+            alert('Something went wrong: ', err);
+          }
+        });
+        
       }
       document.getElementsByClassName('entry-field')[0].value = '';
     }
